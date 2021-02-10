@@ -28,7 +28,7 @@ function setAttributes(elements, attributes) {
 function imageLoaded() {
     imagesLoaded++;
     console.log(imagesLoaded);
-    if (imagesLoaded === totalImages.length) {
+    if (imagesLoaded === totalImages) {
         ready = true;
         console.log('ready =' + ready);
     }
@@ -38,6 +38,7 @@ function imageLoaded() {
 
 //Create elements for links to Unslpash API
 function displayPhotos() {
+    imagesLoaded = 0;
     totalImages = photoArray.length;
     console.log('total Images' + totalImages);
     photoArray.forEach((photo) => {
